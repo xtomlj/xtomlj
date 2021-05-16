@@ -1,6 +1,6 @@
-# TomlJ: A Java parser for Tom's Obvious, Minimal Language (TOML)
+# xTomlJ: A Java parser for Tom's Obvious, Minimal Language (TOML)
 
-TomlJ is a complete [TOML](https://github.com/toml-lang/toml) parser with the
+xTomlJ is a complete [TOML](https://github.com/toml-lang/toml) parser with the
 following attributes:
 
 * Supports the latest TOML specification version (1.0.0-rc.1).
@@ -9,6 +9,9 @@ following attributes:
 
 It uses the [ANTLR](https://github.com/antlr/antlr4/) parser-generator and
 runtime library.
+
+This is a fork from the original project [TomlJ](https://github.com/tomlj/tomlj).
+It was created because the original project appears to be inactive.
 
 ## Usage
 
@@ -24,7 +27,7 @@ String value = result.getString("a. dotted . key");
 
 ## Getting TomlJ
 
-TomlJ is published to a Maven and JCenter.
+TomlJ is published to Maven Central.
 
 To include using Maven:
 ```xml
@@ -37,11 +40,8 @@ To include using Maven:
 
 To include using Gradle: `compile 'org.tomlj:tomlj:1.0.0'`
 
-Snapshot versions are also published to the [bintray repository](https://bintray.com/tomlj/tomlj/tomlj).
-
 ## Links
 
-- [GitHub project](https://github.com/tomlj/tomlj)
-- [Online Java documentation](https://tomlj.org/docs/java/latest/org/tomlj/package-summary.html)
-- [Issue tracker: Report a defect or feature request](https://github.com/tomlj/tomlj/issues/new)
+- [GitHub project](https://github.com/xtomlj/xtomlj)
+- [Issue tracker: Report a defect or feature request](https://github.com/xtomlj/xtomlj/issues/new)
 - [StackOverflow: Ask "how-to" and "why-didn't-it-work" questions](https://stackoverflow.com/questions/ask?tags=tomlj)

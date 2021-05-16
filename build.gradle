@@ -224,7 +224,7 @@ publishing {
       pom {
         name = project.jar.baseName
         description = project.description
-        url = 'https://github.com/tomlj/tomlj'
+        url = 'https://github.com/xtomlj/xtomlj'
         licenses {
           license {
             name = "The Apache License, Version 2.0"
@@ -232,14 +232,18 @@ publishing {
           }
         }
         scm {
-          connection = 'scm:https://github.com/tomlj/tomlj.git'
-          developerConnection = 'scm:git@github.com:tomlj/tomlj.git'
-          url = 'https://github.com/tomlj/tomlj'
+          connection = 'scm:https://github.com/xtomlj/xtomlj.git'
+          developerConnection = 'scm:git@github.com:xtomlj/xtomlj.git'
+          url = 'https://github.com/xtomlj/xtomlj'
         }
         developers {
           developer {
             name = 'Chris Leishman'
             email = 'chris@leishman.org'
+          }
+          developer {
+            name = 'Tobias Schmidt'
+            email = 'tobias.schmidt24080878@gmail.com'
           }
         }
       }
