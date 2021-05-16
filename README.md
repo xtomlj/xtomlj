@@ -25,20 +25,20 @@ result.errors().forEach(error -> System.err.println(error.toString()));
 String value = result.getString("a. dotted . key");
 ```
 
-## Getting TomlJ
+## Getting xTomlJ
 
-TomlJ is published to Maven Central.
+xTomlJ is published to Maven Central.
 
 To include using Maven:
 ```xml
 <dependency>
-  <groupId>org.tomlj</groupId>
-  <artifactId>tomlj</artifactId>
-  <version>1.0.0</version>
+  <groupId>io.github.xtomlj</groupId>
+  <artifactId>xtomlj</artifactId>
+  <version>1.1.0</version>
 </dependency>
 ```
 
-To include using Gradle: `compile 'org.tomlj:tomlj:1.0.0'`
+To include using Gradle: `compile 'io.github.xtomlj:xtomlj:1.1.0'`
 
 ## Links
 
