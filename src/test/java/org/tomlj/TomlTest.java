@@ -18,7 +18,9 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -768,6 +770,20 @@ class TomlTest {
     assertFalse(result2.hasErrors(), () -> joinErrors(result2));
 
     assertFalse(Toml.tableEquals(result1, result2));
+  }
+
+  void testSerializerArrayTables() throws Exception {
+    InputStream is = this.getClass().getResourceAsStream("/org/tomlj/array_table_example.toml");
+    assertNotNull(is);
+    TomlParseResult result = Toml.parse(is);
+    assertFalse(result.hasErrors(), () -> joinErrors(result));
+
+    String serializedToml = result.toToml();
+    TomlParseResult resultReparse =
+        Toml.parse(new ByteArrayInputStream(serializedToml.getBytes(StandardCharsets.UTF_8)));
+    assertFalse(resultReparse.hasErrors(), () -> joinErrors(result));
+
+    assertTrue(Toml.tableEquals(result, resultReparse));
   }
 
   private String joinErrors(TomlParseResult result) {
