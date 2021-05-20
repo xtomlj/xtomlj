@@ -125,6 +125,7 @@ tasks.withType(JavaCompile) {
   ]
 
   options.errorprone {
+    excludedPaths = '.*/generated-src/.*'
     check('UnnecessaryParentheses', CheckSeverity.OFF)
     check('MissingSummary', CheckSeverity.OFF)
     disableWarningsInGeneratedCode = true
