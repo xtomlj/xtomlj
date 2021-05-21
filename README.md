@@ -38,7 +38,7 @@ To include using Maven:
 </dependency>
 ```
 
-To include using Gradle: `compile 'io.github.xtomlj:xtomlj:1.1.0'`
+To include using Gradle: `implementation 'io.github.xtomlj:xtomlj:1.1.0'`
 
 ## Links
 

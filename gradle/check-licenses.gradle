@@ -124,7 +124,8 @@ downloadLicenses {
     // https://checkerframework.org/manual/#license
     // The more permissive MIT License applies to code that you might want
     // to include in your own program, such as the annotations and run-time utility classes.
-    (group('org.checkerframework')): mit
+    (group('org.checkerframework')): mit,
+    (group('org.antlr')): bsd3Clause
   ]
 }
 
