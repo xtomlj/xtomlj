@@ -107,9 +107,7 @@ javadoc.options.encoding = 'UTF-8'
 jacoco { toolVersion = '0.8.7' }
 
 tasks.withType(JavaCompile) {
-  if (JavaVersion.current() > JavaVersion.VERSION_1_8) {
-    options.release = 8
-  }
+  options.release = 8
   options.compilerArgs += [
     '-Xlint:unchecked',
     '-Xlint:cast',
@@ -161,9 +159,6 @@ javadoc { exclude '**/internal/**' }
 
 dependencies {
   errorprone("com.google.errorprone:error_prone_core:2.7.1")
-  if (JavaVersion.current().isJava8()) {
-    errorproneJavac("com.google.errorprone:javac:9+181-r4173-1")
-  }
 
   antlr 'org.antlr:antlr4'
 
